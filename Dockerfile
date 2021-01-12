@@ -1,8 +1,9 @@
 FROM innovanon/doom-base as bzip2
 ARG LFS=/mnt/lfs
 USER lfs
+ #&& TSOCKS_PASSWORD=abc123 tsocks wget -O bzip2.tgz                                          \
 RUN sleep 31 \
- && tsocks wget -O bzip2.tgz                                          \
+ && wget -O bzip2.tgz                                          \
   https://sourceforge.net/projects/bzip2/files/latest/download \
  && tar xf  bzip2.tgz                                          \
  && cd      bzip2-*                                            \
