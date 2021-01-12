@@ -15,6 +15,22 @@ RUN sleep 31 \
  && strip.sh .                                                 \
  && tar acf       ../bzip2.txz .                               \
  && rm -rf $LFS/sources/bzip2*
+# TODO
+#      CPPFLAGS="$CPPFLAGS"                     \
+#      CXXFLAGS="$CXXFLAGS"                     \
+#      CFLAGS="$CFLAGS"                         \
+#      LDFLAGS="$LDFLAGS"                       \
+#      CC="$CC"                                 \
+#      CXX="$CXX"                               \
+#      FC="$FC"                                 \
+#      PATH="$PATH"                             \
+#      LIBRARY_PATH="$LIBRARY_PATH"             \
+#      LD_LIBRARY_PATH="$LD_LIBRARY_PATH"       \
+#      CPATH="$CPATH"                           \
+#      C_INCLUDE_PATH="$C_INCLUDE_PATH"         \
+#      CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH" \
+#      OBJC_INCLUDE_PATH="$OBJC_INCLUDE_PATH"   \
+#      LD_RUN_PATH="$LD_RUN_PATH"               \
 
 #FROM innovanon/doom-base as test
 #COPY --from=bzip2 /tmp/bzip2.txz /tmp/
