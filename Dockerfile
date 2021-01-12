@@ -11,6 +11,7 @@ RUN sleep 31 \
  && make PREFIX=/tmp/bzip2/usr/local install -n                \
  && make PREFIX=/tmp/bzip2/usr/local install                   \
  && cd          /tmp/bzip2                                     \
+ && strip.sh .                                                 \
  && tar acf       ../bzip2.txz .                               \
  && rm -rf $LFS/sources/bzip2*
 
