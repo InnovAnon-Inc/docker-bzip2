@@ -3,6 +3,7 @@ ARG LFS=/mnt/lfs
 USER lfs
  #&& TSOCKS_PASSWORD=abc123 tsocks wget -O bzip2.tgz                                          \
 RUN sleep 31 \
+ && command -v strip.sh                 \
  && curl --proxy $SOCKS_PROXY -o bzip2.tgz -L             \
   https://sourceforge.net/projects/bzip2/files/latest/download \
  && tar xf  bzip2.tgz                                          \
