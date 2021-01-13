@@ -13,7 +13,7 @@ RUN sleep 31 \
  && make PREFIX=/tmp/bzip2/usr/local install                   \
  && cd          /tmp/bzip2                                     \
  && strip.sh .                                                 \
- && tar acf       ../bzip2.txz .                               \
+ && tar  pacf       ../bzip2.txz .                               \
  && rm -rf $LFS/sources/bzip2*
 # TODO
 #      CPPFLAGS="$CPPFLAGS"                     \
@@ -39,4 +39,3 @@ RUN sleep 31 \
 
 FROM scratch as final
 COPY --from=bzip2 /tmp/bzip2.txz /tmp/
-
